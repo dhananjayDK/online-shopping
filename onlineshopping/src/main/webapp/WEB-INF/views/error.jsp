@@ -41,35 +41,31 @@
 
 <body style="margin-top: -60px;">
 	<div class="wrapper">
-		<!-- Navigation -->
-		<%@include file="./shared/navbar.jsp"%>
 		<!-- Page Content -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		
+		  <div class="container">
+		      <div class="navbar-header">
+		        <a class="navbar-brand" href="${contextRoot}/home">Home</a>
+		      </div>
+		  </div>
+		
+		</nav>
 		<div class="content">
-			<!-- load when clicked on Home tab -->
-			<c:if test="${userClickHome == true}">
-				<%@include file="home.jsp"%>
-			</c:if>
-
-			<!-- load when clicked on About tab -->
-			<c:if test="${userClickAbout == true}">
-				<%@include file="about.jsp"%>
-			</c:if>
-
-			<!-- load when clicked on Home page -->
-			<c:if test="${userClickContact == true}">
-				<%@include file="contact.jsp"%>
-			</c:if>
-			
-			<!-- load when clicked on Home page -->
-			<c:if test="${userClickAllProduct == true or userClickCategoryProduct==true}">
-				<%@include file="listProduct.jsp"%>
-			</c:if>
-			
-			<!-- load when Single image is clicked -->
-			<c:if test="${userClickShowProduct == true}">
-				<%@include file="singleProduct.jsp"%>
-			</c:if>
+		    <div class="container">
+		       <div class="row">
+		         <div class="col-xs-12">
+		            <div class="jumbotron">
+		               <h1>${errorTitle}</h1>
+		               <blockquote style="word-wrap:break-word">
+		                 ${errordescription}
+		               </blockquote>
+		            </div>
+		         </div>
+		       </div>
+		    </div>
 		</div>
+		
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
 		<!-- Bootstrap core JavaScript -->

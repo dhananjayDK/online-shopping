@@ -6,6 +6,11 @@ import com.dksofts.shoppingbackend.dto.Category;
 
 public interface CategotyDAO {
 
-	 List<Category> list();
 	 Category get(int id);
+	 List<Category> list();
+	 
+	 
+	 boolean addCategory(Category category);
+	 boolean updateCategory(Category category);
+	 boolean deleteCategory(Category category);
 }
