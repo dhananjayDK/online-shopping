@@ -59,7 +59,7 @@ $(function() {
 					if(data<1){
 						return '<span style="color:red;">Out Of Stock!</span>';
 					}
-					return data;
+					return data; 
 				}
 			}, {
 				data: 'id',
@@ -68,7 +68,8 @@ $(function() {
 					var span1='<span class="glyphicon glyphicon-eye-open"></span>';
 					var span2='<span class="glyphicon glyphicon-shopping-cart"></span>';
 					str += '<a href="'+window.contextRoot+'/showby/'+data+'/product" class="btn btn-primary">'+span1+'</a>'+'&nbsp&nbsp';
-				    if(row.quantity < 1 ){
+				    //In row all data is available
+					if(row.quantity < 1 ){
 				    return str += '<a href="javascript:void(0)" class="btn btn-success disabled">'+span2+'</a>';	
 				    }else{
 					str += '<a href="'+window.contextRoot+'/cart/add/'+data+'/product" class="btn btn-success">'+span2+'</a>';
