@@ -1,6 +1,10 @@
 $(function() {
 	switch (menu) {
-
+	
+	case 'Manage Products':
+		$("#manageProduct").addClass('active');
+		$("#home").removeClass('active');
+		break;
 	case 'About Us':
 		$("#about").addClass('active');
 		$("#home").removeClass('active');
@@ -79,5 +83,12 @@ $(function() {
 			}]
 		});
 	}
-
+  //dismissing alert message
+	var $alert = $('.alert');
+	
+	if($alert.length){
+		setTimeOut(function(){
+			$alert.fadeOut(slow);
+		},6000);
+	}
 })

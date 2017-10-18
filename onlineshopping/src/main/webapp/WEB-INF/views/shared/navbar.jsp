@@ -20,6 +20,8 @@
 					href="${contextRoot}/contact">Contact</a></li>
 				<li class="nav-item" id="listOfProduct"><a class="nav-link"
 					href="${contextRoot}/show/all/listOfProduct">View Product</a></li>
+					<li class="nav-item" id="manageProduct"><a class="nav-link"
+					href="${contextRoot}/management/controller/handle/products">Manage Product</a></li>
 
 			</ul>
 		</div>

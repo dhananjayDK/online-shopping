@@ -17,6 +17,11 @@
       <property name = "prefix" value = "/WEB-INF/views/" />
       <property name = "suffix" value = ".jsp" />
    </bean>
+   
+   <!--id should not change  -->
+   <bean id="multipartResolver"
+   class="org.springframework.web.multipart.support.StandardServletMultipartResolver" />
+   
    <!-- loading static resources -->
    <mvc:annotation-driven/>
    <mvc:resources location="/assests/" mapping="/resources/**"/>

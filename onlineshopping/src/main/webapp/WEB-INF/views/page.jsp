@@ -54,7 +54,7 @@
 			<c:if test="${userClickAbout == true}">
 				<%@include file="about.jsp"%>
 			</c:if>
-
+             
 			<!-- load when clicked on Home page -->
 			<c:if test="${userClickContact == true}">
 				<%@include file="contact.jsp"%>
@@ -68,6 +68,12 @@
 			<!-- load when Single image is clicked -->
 			<c:if test="${userClickShowProduct == true}">
 				<%@include file="singleProduct.jsp"%>
+			</c:if>
+			
+			<!-- load when manage product is clicked -->
+			<c:if test="${userClickManageProducts == true}">
+			    
+				<%@include file="managgeProduct.jsp"%>
 			</c:if>
 		</div>
 		<!-- Footer -->
