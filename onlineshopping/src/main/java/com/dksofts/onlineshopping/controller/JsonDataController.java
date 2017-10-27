@@ -22,8 +22,23 @@ public class JsonDataController {
 		return productDAO.listActiveProducts(); 
 	}
 	
+	@RequestMapping("/admin/all/products")
+	public List<Product> getAllProductsAdmin(){
+		return productDAO.list(); 
+	}
+	
 	@RequestMapping("/category/{id}/products")
 	public List<Product> getProductByCategory(@PathVariable("id") int id){
 		return productDAO.listActiveProductsByCategory(id); 
+	}
+	
+	@RequestMapping("/product/{id}/activation")
+	public String handleActivation(@PathVariable("id") int id){
+		Product product = productDAO.get(id);
+		boolean activation = product.isIs_active();
+		product.setIs_active(!activation);
+		productDAO.update(product);
+		return (activation)?"You have successfully deactivated the product with ID "+id
+				:"You have successfully activated the product with ID "+id;
 	}
 }

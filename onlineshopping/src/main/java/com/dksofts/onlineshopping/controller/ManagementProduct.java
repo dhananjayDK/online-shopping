@@ -54,6 +54,9 @@ public class ManagementProduct {
     		  
     		  mv.addObject("message", "Product Submitted Successfully");
     	  }
+    	  else if(operation.equals("category")){
+    		  mv.addObject("message", "Category Submitted Successfully");
+    	  }
       }
       return mv;
 	}
@@ -88,5 +91,16 @@ public class ManagementProduct {
 		System.out.println("88888888888888888888888888");
 		System.out.println(categoryDAO.list());
 		return categoryDAO.list();
+	}
+	
+	@ModelAttribute(value="category")
+	public Category getCategory(){
+		return new Category();
+	}
+	//handling category submission
+	@RequestMapping(value="/category",method=RequestMethod.POST)
+	public String categorySubmission(@ModelAttribute Category category){
+		categoryDAO.addCategory(category);
+		return "redirect:/management/controller/handle/products?operation=category";
 	}
 }

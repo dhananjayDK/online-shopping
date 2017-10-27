@@ -31,7 +31,7 @@ public class Product {
 	@Min(value=1,message="The Price con not be less than One")
 	private double unit_price;
 	private int quantity;
-	@JsonIgnore
+	
 	private boolean is_active;
 	@JsonIgnore
 	private int category_id;

@@ -89,6 +89,11 @@
         		<!--  data table bootstrap plugin-->
        <%--  <script src="${js}/dataTables.bootstrap.js"></script> --%>
         
+        <!-- bootbox js -->
+		<script src="${js}/bootbox.min.js"></script>
+		
+		<!-- JS for validator -->
+		<script src="${js}/jquery.validate.js"></script>
         
         <!-- self coded jQuery  -->
 		<script src="${js}/myapp.js"></script>
